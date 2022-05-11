@@ -1,0 +1,135 @@
+:root {
+    --color-primary-200: #38CFD9;
+    --color-primary-400: #136C72;
+    --color-primary-600: #23424A;
+    --color-primary-800: #072a2d;
+
+    --color-accent-400: #87629A;
+
+    --color-neutral-100: #fff;
+    --color-neutral-200: #dde2e3;
+
+    --padding-block-l-vw: 10vw;
+    --padding-inline-l-vw: 8.75vw;
+    --padding-block-m-vw: 6.5vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+    padding: var(--padding-block-l-vw) var(--padding-inline-l-vw);
+    background-color: var(--color-primary-600);
+    color: var(--color-neutral-100);
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+}
+
+.title {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.hero__paragraph {
+    margin-bottom: 4.5rem;
+    color: var(--color-neutral-200);
+}
+
+.button {
+    display: inline-block;
+    border-radius: 100px;
+    padding: 1.5rem 4rem;
+    background-color: var(--color-primary-200);
+    color: var(--color-primary-800);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.flex-container {
+    padding: var(--padding-block-m-vw) var(--padding-inline-l-vw);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 2rem;
+}
+
+.article {
+    text-align: center;
+}
+
+.article__heading {
+    margin-bottom: 2rem;
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--color-neutral-100);
+}
+
+.article__heading.article__heading--purple {
+    color: var(--color-accent-400);
+}
+
+.wrapper {
+    padding: var(--padding-block-m-vw) var(--padding-inline-l-vw);
+    background-color: var(--color-primary-400);
+    color: var(--color-neutral-100);
+}
+
+.wrapper__inner {
+    margin: 0 auto;
+}
+
+.wrapper .article:nth-child(2) {
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+    .title {
+        font-size: 3.625rem;
+    }
+
+    .paragraph {
+        font-size: 1.6rem
+    }
+
+    .button {
+        font-size: 1.625rem;
+    }
+
+    .wrapper .article {
+        display: inline-block;
+        width: calc(49% - 1rem);
+    }
+
+    .wrapper .article:nth-child(2) {
+        margin-top: 0;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .flex-container {
+        flex-direction: row;
+    }
+}
